@@ -8,8 +8,11 @@ use App\Flight;
 
 class AirportController extends Controller
 {
-    public function index(){
-        $airports = Airport::all();
-        return view('welcome', compact('airports'));
+
+    public function homepage()
+    {
+        return View('welcome')
+        ->with('airports', Airport::all())
+        ->with('flights', Flight::orderBy('price', 'ASC')->get());
     }
 }

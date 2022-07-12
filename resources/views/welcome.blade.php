@@ -21,9 +21,9 @@
             <p class="card-text">Prezzo: <small class="text-muted">{{ $flight->price}}</small></p>
         @endforeach
 
-{{--         @foreach ($airports as $airport)
-            <p class="card-text">Codice partenza: <small class="text-muted">{{ $airport->nome}}</small></p>
-        @endforeach --}}
+        @foreach ($airports as $airport)
+            <p class="card-text">Codice partenza: <small class="text-muted">{{ $airport->name}}</small></p>
+        @endforeach
 
     </body>
 </html>
